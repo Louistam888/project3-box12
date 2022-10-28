@@ -18,6 +18,21 @@ import {useState, useEffect} from "react";
 
 function App() {
   
+
+  //USE STATE FOR FETCHING CURRENT TIME 
+  const [time, setTime] = useState("")
+  const currentTime = time; 
+
+  useEffect (() => {
+    const interval = setInterval(() => {
+      let date = new Date().toLocaleString("en-CA", {timeZone: "America/Toronto", year:"numeric", month:"short", weekday: "short", day:"numeric", hour12:false, hour: "numeric", minute:"2-digit", second: "2-digit" });
+      setTime(date);
+        
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+
   
   //USE STATE FOR GETTING ALL VOLUNTEERS
   const [allVols, setAllVols] = useState([])
@@ -45,9 +60,9 @@ function App() {
   return (
 
     <div className="app">
-      <Header />
+      <Header time = {currentTime} />
       <div>
-        <Available list = {all}/>
+        <Available list = {all} time = {currentTime}/>
         <Allvolunteers list = {all} />
       </div>
     </div>
