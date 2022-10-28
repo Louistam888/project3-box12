@@ -3,8 +3,6 @@ const Volunteer = (props) => {
   const person = props.details; 
   const day = props.details.avail;
 
- console.log(day.Mon.start)
-
   return (
     <li>
       <h3>{person.fullName}</h3>

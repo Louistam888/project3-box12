@@ -1,17 +1,22 @@
 import './App.css';
+
+//COMPONENTS 
 import Header from "./Header";
+import Available from './Available';
 import Allvolunteers from "./Allvolunteers";
+
+//SASS
+import "./partials/setup.scss";
+import "./partials/typography.scss";
+import "./partials/header.scss";
+import "./partials/allVolunteers.scss";
+
 import firebaseConfig from "./firebase";
 import {getDatabase, ref, push, onValue, remove} from "firebase/database"; 
-
 import {useState, useEffect} from "react";
 
-
 function App() {
-
-  //USE STATE FOR TIME 
   
-
   //USE STATE FOR GETTING ALL VOLUNTEERS
   const [allVols, setAllVols] = useState([])
   const all = allVols;
@@ -35,19 +40,18 @@ function App() {
       });
     }, []);
 
-
-
-
-
   return (
 
-    <div>
-    
+  <body>
+    <div className="app">
       <Header />
-      
+    <main>
+      <Available list = {all}/>
       <Allvolunteers list = {all} />
-
+    </main>
     </div>
+  </body>
+   
   );
 }
 

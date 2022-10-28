@@ -1,17 +1,15 @@
+const Available = (props) => {
 
-import Volunteer from "./Volunteer";
-
-const Allvolunteers = (props) => {
   const allVolsArray = props.list;
 
   return (
-    <section className="everyone">
+    <section className="available">
       <div className="wrapper">
-        <h2>All volunteers</h2>
+        <h2>Currently available</h2>
           <ul className="allVols">
             {
               allVolsArray.map((person) => {
-                return <Volunteer details ={person} />
+                console.log(person)
               })
             }
           </ul>
@@ -20,4 +18,4 @@ const Allvolunteers = (props) => {
   )
 }
 
-export default Allvolunteers;
+export default Available; 
