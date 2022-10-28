@@ -1,0 +1,19 @@
+.app h1 {
+  font-size: 5rem;
+  width: 100%;
+}
+.app h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.app h3 {
+  font-size: 3rem;
+}
+.app .time {
+  font-size: 3rem;
+}
+.app .details {
+  font-size: 1.5rem;
+}
