@@ -18,40 +18,40 @@ import {useState, useEffect} from "react";
 
 function App() {
   
+  
   //USE STATE FOR GETTING ALL VOLUNTEERS
   const [allVols, setAllVols] = useState([])
   const all = allVols;
 
-    //USE EFFECT FOR FETCHING ALL VOLUNTEERS 
-    useEffect (()=> {
-   
-      const database = getDatabase(firebaseConfig);
-      const databaseRef = ref(database);
+  //USE EFFECT FOR FETCHING ALL VOLUNTEERS 
+  useEffect (()=> {
   
-      onValue(databaseRef,(response)=> {
-  
-        const newState = [] 
-        const data = response.val();
-  
-        for (let object in data) {
-          const newObject = {object, ...data[object] }  
-          newState.push(newObject)
-        };
-        setAllVols(newState)
-      });
-    }, []);
+    const database = getDatabase(firebaseConfig);
+    const databaseRef = ref(database);
+
+    onValue(databaseRef,(response)=> {
+
+      const newState = [] 
+      const data = response.val();
+
+      for (let object in data) {
+        const newObject = {object, ...data[object] }  
+        newState.push(newObject)
+      };
+      setAllVols(newState)
+    });
+  }, []);
 
   return (
 
-  <body>
     <div className="app">
       <Header />
-    <main>
-      <Available list = {all}/>
-      <Allvolunteers list = {all} />
-    </main>
+      <div>
+        <Available list = {all}/>
+        <Allvolunteers list = {all} />
+      </div>
     </div>
-  </body>
+
    
   );
 }

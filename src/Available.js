@@ -1,3 +1,5 @@
+import Header from "./Header";
+
 const Available = (props) => {
 
   const allVolsArray = props.list;
@@ -9,7 +11,7 @@ const Available = (props) => {
             <ul className="allVols">
               {
                 allVolsArray.map((person) => {
-                  console.log(person)
+                  console.log("test")
                 })
               }
             </ul>

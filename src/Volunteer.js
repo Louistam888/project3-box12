@@ -10,11 +10,11 @@ const Volunteer = (props) => {
 
       {
         person.phone2 ===""
-          ? <a href="tel:{props.details.phone1}" class="callButton" alt="Call {props.details.phone1}">Call primary</a>
+          ? <a href="tel:{props.details.phone1}" className="callButton" alt="Call {props.details.phone1}">Call primary</a>
           : 
             <>
-             <a href="tel:{props.details.phone1}" class="callButton" alt="Call {props.details.phone1}">Call primary</a>
-             <a href="tel:{props.details.phone2}" class="callButton" alt="Call {props.details.phone2}">Call secondary</a>
+             <a href="tel:{props.details.phone1}" className="callButton" alt="Call {props.details.phone1}">Call primary</a>
+             <a href="tel:{props.details.phone2}" className="callButton" alt="Call {props.details.phone2}">Call secondary</a>
             </>       
       }
 

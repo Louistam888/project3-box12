@@ -11,8 +11,9 @@ const Allvolunteers = (props) => {
           <h2>All volunteers</h2>
             <ul className="allVols">
               {
-                allVolsArray.map((person) => {
-                  return <Volunteer details ={person} />
+                allVolsArray.map((person, index) => {
+                  return <Volunteer details ={person}
+                                    key = {index} />
                 })
               }
             </ul>

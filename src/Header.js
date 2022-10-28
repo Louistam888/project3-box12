@@ -11,9 +11,8 @@ const Header = () => {
       let day = new Date().toLocaleString("en-CA", {timeZone: "America/Toronto", weekday: "short"});
       let hour = new Date().toLocaleString("en-CA", {timeZone: "America/Toronto", hour12:false, hour: "numeric"});
       let minutes = new Date().toLocaleString("en-CA", {timeZone: "America/Toronto", minute: "2-digit"})
-      // console.log(day)
       setTime(date);
-  
+        
     }, 1000);
     return () => clearInterval(interval);
   }, []);
