@@ -1,50 +1,27 @@
 import firebaseConfig from "./firebase";
-import {useState, useEffect} from "react";
-import {getDatabase, ref, push, onValue, remove} from "firebase/database"; 
-const Allvolunteers = () => {
+import Volunteer from "./Volunteer";
+import{ useState } from "react";
 
-  const [allVols, setAllVols] = useState([])
+// import {useState, useEffect} from "react";
+// import {getDatabase, ref, push, onValue, remove} from "firebase/database"; 
 
-  useEffect (()=> {
-   
-    const database = getDatabase(firebaseConfig);
-    
-    const databaseRef = ref(database);
+// const [allVols, setAllVols] = useState("")
 
-    onValue(databaseRef,(response)=> {
+const Allvolunteers = (props) => {
+  const allVolsArray = props.list;
 
-      const newState = [] 
-
-      const data = response.val();
-
-      // console.log(data)
-
-      for (const object in data) {
-        
-        newState.push(object)
-      }
-
-      console.log(newState)
-
-      // newState.push(data)
-
-      // console.log(newState)
-
-      // for (let key in data) {
-      //   newState.push({key: key, name: data[key]}) 
-      // }
-    
-      // setAllVols(newState)
-
-      })
-  },[])
-
+//  allVolsArray.forEach((person)=>{
+//       person.fullName
+//   })     
 
   return (
    <ul className="allVols">
-      <li>
-        <p>{allVols}</p>
-      </li>
+    {
+      allVolsArray.map((person) => {
+        return <Volunteer details ={person} />
+      })
+    }
+      
    </ul>
   )
 }
