@@ -12,7 +12,7 @@ const Allvolunteers = (props) => {
             <ul className="allVols">
               {
                 allVolsArray.map((person, index) => {
-                  return <Volunteer details ={person}
+                  return <Volunteer details = {person}
                                     key = {index} />
                 })
               }

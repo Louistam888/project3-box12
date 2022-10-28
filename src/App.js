@@ -20,17 +20,17 @@ function App() {
   
 
   //USE STATE FOR FETCHING CURRENT TIME 
-  const [time, setTime] = useState("")
-  const currentTime = time; 
+  // const [time, setTime] = useState("")
+  // const currentTime = time; 
 
-  useEffect (() => {
-    const interval = setInterval(() => {
-      let date = new Date().toLocaleString("en-CA", {timeZone: "America/Toronto", year:"numeric", month:"short", weekday: "short", day:"numeric", hour12:false, hour: "numeric", minute:"2-digit", second: "2-digit" });
-      setTime(date);
+  // useEffect (() => {
+  //   const interval = setInterval(() => {
+  //     let date = new Date().toLocaleString("en-CA", {timeZone: "America/Toronto", year:"numeric", month:"short", weekday: "short", day:"numeric", hour12:false, hour: "numeric", minute:"2-digit", second: "2-digit" });
+  //     setTime(date);
         
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
 
   
@@ -40,7 +40,6 @@ function App() {
 
   //USE EFFECT FOR FETCHING ALL VOLUNTEERS 
   useEffect (()=> {
-  
     const database = getDatabase(firebaseConfig);
     const databaseRef = ref(database);
 
@@ -60,9 +59,9 @@ function App() {
   return (
 
     <div className="app">
-      <Header time = {currentTime} />
+      <Header  />
       <div>
-        <Available list = {all} time = {currentTime}/>
+        <Available list = {all} />
         <Allvolunteers list = {all} />
       </div>
     </div>
