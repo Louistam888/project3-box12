@@ -11,6 +11,7 @@ import "./partials/typography.scss";
 import "./partials/header.scss";
 import "./partials/allVolunteers.scss";
 import "./partials/available.scss";
+import "./partials/currentVols.scss";
 
 import firebaseConfig from "./firebase";
 import {getDatabase, ref, push, onValue, remove} from "firebase/database"; 
