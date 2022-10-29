@@ -17,14 +17,26 @@ const CurrentVols = (props) => {
       <p className="details">Notes: {person.notes}</p>      
 
       {
-        person.phone2 ===""
+        !person 
+        ? <p className="none">No volunteers available</p> 
+        : person.phone2 ===""
+          ? <a href={phone1} className="callButton" alt={phone1Alt}>Call</a>
+          : <>
+             <a href={phone1} className="callButton" alt={phone1Alt}>Call primary</a>
+             <a href={phone2} className="callButton" alt={phone2Alt}>Call secondary</a>
+            </>  
+            
+      }
+
+
+
+{/* person.phone2 ===""
           ? <a href={phone1} className="callButton" alt={phone1Alt}>Call</a>
           : 
             <>
              <a href={phone1} className="callButton" alt={phone1Alt}>Call primary</a>
              <a href={phone2} className="callButton" alt={phone2Alt}>Call secondary</a>
-            </>       
-      }
+            </>        */}
 
       <h4>Availability Today</h4>
       <p className="details"> {todayAvailStart} to {todayAvailEnd}</p>
