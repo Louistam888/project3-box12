@@ -14,7 +14,7 @@ import "./partials/available.scss";
 import "./partials/currentVols.scss";
 
 import firebaseConfig from "./firebase";
-import {getDatabase, ref, push, onValue, remove} from "firebase/database"; 
+import {getDatabase, ref, onValue} from "firebase/database"; 
 import {useState, useEffect} from "react";
 
 function App() {

@@ -1,7 +1,7 @@
 const CurrentVols = (props) => {
 
   const person = props.details; 
-  const day = props.details.avail;
+  // const day = props.details.avail;
   const today = props.today;
   const todayAvailStart = props.details.avail[today].start;
   const todayAvailEnd = props.details.avail[today].end;
