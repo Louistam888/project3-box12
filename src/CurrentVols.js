@@ -5,8 +5,10 @@ const CurrentVols = (props) => {
   const today = props.today;
   const todayAvailStart = props.details.avail[today].start;
   const todayAvailEnd = props.details.avail[today].end;
-  const phone1 = props.details.phone1
-  const phone2 = props.details.phone2
+  const phone1 = `tel: ${props.details.phone1}`
+  const phone2 = `tel: ${props.details.phone2}`
+  const phone1Alt = `call ${props.details.phone1}`
+  const phone2Alt = `call ${props.details.phone2}`
 
   
   return (
@@ -16,11 +18,11 @@ const CurrentVols = (props) => {
 
       {
         person.phone2 ===""
-          ? <a href={phone1} className="callButton" alt="Call {props.details.phone1}">Call</a>
+          ? <a href={phone1} className="callButton" alt={phone1Alt}>Call</a>
           : 
             <>
-             <a href={phone1} className="callButton" alt="Call {props.details.phone1}">Call primary</a>
-             <a href={phone2} className="callButton" alt="Call {props.details.phone2}">Call secondary</a>
+             <a href={phone1} className="callButton" alt={phone1Alt}>Call primary</a>
+             <a href={phone2} className="callButton" alt={phone2Alt}>Call secondary</a>
             </>       
       }
 
