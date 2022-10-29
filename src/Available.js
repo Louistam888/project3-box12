@@ -35,7 +35,6 @@ const Available = (props) => {
     const availableEnd = person.avail[dayOfWeek].end;
 
     return availableStart <= timeNow && availableEnd >= timeNow
-
   })
 
   return (
@@ -44,11 +43,15 @@ const Available = (props) => {
           <h2>Currently available</h2>
             <ul className="allVols">
               {
-                volsAvailableNow.map((person,index ) => {
+                (volsAvailableNow.length == 0) 
+                 ? (<p>No volunteers available</p>) 
+                 : (volsAvailableNow.map((person, index) => {
+                  console.log(person)
                   return <CurrentVols details = {person}
-                                     key = {index} 
-                                     today = {dayOfWeek}/>
-                })
+                                      key = {index} 
+                                      today = {dayOfWeek}/>
+                  })
+                )
               }
             </ul>
       </section>

@@ -1,3 +1,7 @@
+import firebaseConfig from "./firebase";
+import {getDatabase, ref, remove} from "firebase/database"; 
+import {useState, useEffect} from "react";
+
 const Volunteer = (props) => {
 
   const person = props.details; 
@@ -8,6 +12,15 @@ const Volunteer = (props) => {
   const phone1Alt = `call ${props.details.phone1}`
   const phone2Alt = `call ${props.details.phone2}`
 
+  console.log(props.details)
+
+  const handleRemoveVol = (deleteThis) => {
+    const database= getDatabase(firebaseConfig);
+    const databaseRef = ref(database, `/${deleteThis}`);
+    console.log(databaseRef)
+    remove(databaseRef)
+  }
+
   return (
     <li>
       <h3>{person.fullName}</h3>
@@ -15,11 +28,16 @@ const Volunteer = (props) => {
 
       {
         person.phone2 ===""
-          ? <a href={phone1} className="callButton" alt={phone2Alt}>Call</a>
+          ? <>
+              <a href={phone1} className="callButton" alt={phone2Alt}>Call</a>
+              <button className="removeVol" onClick={()=> {handleRemoveVol(person.object)}}>Remove volunteer</button>
+           
+            </>
           : 
             <>
              <a href={phone1} className="callButton" alt={phone1Alt}>Call primary</a>
              <a href={phone2} className="callButton" alt={phone2Alt}>Call secondary</a>
+             <button className="removeVol" onClick={()=> {handleRemoveVol(person.object)}}>Remove volunteer</button>
             </>       
       }
 
