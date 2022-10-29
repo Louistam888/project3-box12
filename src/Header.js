@@ -27,7 +27,7 @@ const Header = () => {
           <h1>Box 12 dispatch</h1>
           <p className="time">{currentTime}</p>
           <a href="tel:123-456-7890" className="mainNumbers" alt="Call 123-456-7890">Captain's line</a>
-          <a href="tel:967-1111" className="mainNumbers" alt="Call 967-1111">TFS Communciations</a>
+          <a href="tel:416-967-1111" className="mainNumbers" alt="Call 416-967-1111">TFS Communciations</a>
         </div>
       </div>
     </header>
