@@ -43,9 +43,10 @@ const Available = (props) => {
   })
 
   return (
-    <div className="wrapper">
+   
       <section className="available">
-          <h2>Currently available</h2>
+        <h2>Currently available</h2>
+          <div className="wrapper">
             <ul className="allVols">
               {
                 (volsAvailableNow.length == 0) 
@@ -58,8 +59,9 @@ const Available = (props) => {
                 )
               }
             </ul>
+          </div>
       </section>
-    </div>
+   
   )
 }
 

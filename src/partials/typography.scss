@@ -1,8 +1,14 @@
-.app {
+@import "./variables.scss";
 
   h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     width: 100%;
+    font-family: $mainAccent;
+    text-transform: uppercase;
+    color: $TFSred;
+    text-shadow: -1px -1px 0 $TFSwhite, 1px -1px 0 $TFSwhite, -1px 1px 0 $TFSwhite, 1px 1px 0 $TFSwhite;
+    margin-bottom: 10px;
+    padding: 0;
   }
 
   h2 {
@@ -10,6 +16,12 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    background-color: $TFSred;
+    font-family: $mainAccent;
+    text-transform: uppercase;
+    color: $TFSwhite;
+    padding: 15px
+   
   }
 
   h3 {
@@ -17,11 +29,13 @@
   }
 
   .time {
-    font-size: 3rem; 
+    font-size: 1.6rem; 
+    color: $TFSwhite;   
+    text-transform: uppercase;
+    font-family: $bodyText;
   }
 
   .details {
     font-size: 1.5rem;
   }
 
-}
