@@ -16,26 +16,44 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: $TFSred;
     font-family: $mainAccent;
     text-transform: uppercase;
     color: $TFSwhite;
-    padding: 15px
-   
+    padding: 15px;
+    font-size: 1.8rem;
+  }
+
+  .h2Black {
+    background-color: $black;
+  }
+
+  .h2Red {
+    background-color: $TFSred;
   }
 
   h3 {
-    font-size: 3rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
   }
 
   .time {
     font-size: 1.6rem; 
     color: $TFSwhite;   
     text-transform: uppercase;
-    font-family: $bodyText;
+    font-family: $bodyBold;
+    margin-top: 10px;
   }
 
   .details {
     font-size: 1.5rem;
+  }
+
+  .aboutDetails {
+    display: flex;
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: pre-wrap;
+    justify-content: center;
+    margin-bottom: 8px;
   }
 

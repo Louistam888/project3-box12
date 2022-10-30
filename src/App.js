@@ -13,7 +13,8 @@ import "./partials/allVolunteers.scss";
 import "./partials/available.scss";
 import "./partials/currentVols.scss";
 import "./partials/mediaQueries.scss";
-// import "./partials/variables.scss";
+import "./partials/volunteer.scss";
+import "./partials/accordion.scss";
 
 import firebaseConfig from "./firebase";
 import {getDatabase, ref, onValue} from "firebase/database"; 
@@ -44,10 +45,29 @@ function App() {
     });
   }, []);
 
+
+  const accordion = () => {
+
+    accordion.accordionItemHeader = document.querySelectorAll(".accordionItemHeader");
+    accordion.accordionItemHeader.forEach(header => {
+      
+        header.classList.toggle("active");
+      
+        const accordionItemBody = header.nextElementSibling;
+    
+        if (header.classList.contains("active")) {    
+          accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";  
+        } else {
+          accordionItemBody.style.maxHeight = 0;
+        }
+      });
+  }
+   
+
   return (
 
     <div className="app">
-      <Header  />
+      <Header handleAccordion = {accordion}/>
       <div>
         <Available list = {all} />
         <Allvolunteers list = {all} />

@@ -1,0 +1,48 @@
+@import "./variables.scss";
+
+
+.accordionItemHeader {
+  cursor: pointer;
+  position: relative;
+  color: $TFSwhite;
+  display: flex;
+  align-items: center;
+  background-color: $black;
+
+  justify-content: center;
+}
+
+
+.accordionItemHeader::after, .accordionItemHeader.active::after {
+  font-size: 3rem;
+  position: absolute;
+  right: 5%;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%; 
+  padding: 0 10px;
+}
+
+.accordionItemHeader::after {
+  content: "\002B";
+}
+
+.accordionItemHeader.active::after {
+  content: "\002D";   
+}
+
+.accordionContent {
+  padding: 10px;
+  color: $black;
+  font-size: 1.5rem;
+  font-family: $bodyText;
+}
+
+.accordionItemBody {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: max-height 0.3s ease-out;
+}

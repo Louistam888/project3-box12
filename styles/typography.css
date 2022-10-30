@@ -10,6 +10,12 @@
   font-weight: 700;
   font-display: swap;
 }
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
 h1 {
   font-size: 3rem;
   width: 100%;
@@ -26,15 +32,24 @@ h2 {
   display: flex;
   justify-content: center;
   text-align: center;
-  background-color: #ec1d24;
   font-family: "Poppins-Semibold";
   text-transform: uppercase;
   color: #ffffff;
   padding: 15px;
+  font-size: 1.8rem;
+}
+
+.h2Black {
+  background-color: #161515;
+}
+
+.h2Red {
+  background-color: #ec1d24;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
 }
 
 .time {
@@ -42,8 +57,18 @@ h3 {
   color: #ffffff;
   text-transform: uppercase;
   font-family: "OpenSans-Bold";
+  margin-top: 10px;
 }
 
 .details {
   font-size: 1.5rem;
+}
+
+.aboutDetails {
+  display: flex;
+  font-size: 1.5rem;
+  text-align: center;
+  white-space: pre-wrap;
+  justify-content: center;
+  margin-bottom: 8px;
 }

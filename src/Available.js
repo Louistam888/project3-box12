@@ -36,16 +36,13 @@ const Available = (props) => {
     const availableStart = Number((person.avail[dayOfWeek].start).replace(":", ""));
     const availableEnd = Number((person.avail[dayOfWeek].end).replace(":", ""));
 
-    
-
-
     return availableStart <= timeNow && availableEnd >= timeNow
   })
 
   return (
    
       <section className="available">
-        <h2>Currently available</h2>
+        <h2 className="h2Red">Currently available</h2>
           <div className="wrapper">
             <ul className="allVols">
               {

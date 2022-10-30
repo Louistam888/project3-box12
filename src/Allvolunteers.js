@@ -88,7 +88,7 @@ const Allvolunteers = (props) => {
     <div className="wrapper">
       <section className="everyone">
       
-        <h2>All volunteers</h2>
+        <h2 className="h2Red">All volunteers</h2>
           <ul className="allVols">
             {
               allVolsArray.map((person, index) => {
@@ -98,7 +98,7 @@ const Allvolunteers = (props) => {
             }
           </ul>
 
-          <h2>Add volunteer</h2>
+          <h2 className="h2Red">Add volunteer</h2>
 
           <form action="submit">
 

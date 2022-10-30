@@ -13,7 +13,7 @@ const CurrentVols = (props) => {
   return (
 
     
-    <li>
+    <li className="vol">
       <h3>{person.fullName}</h3>
       { `${person.notes}` == 0
       ? <p className="details">Notes: N/A</p>
