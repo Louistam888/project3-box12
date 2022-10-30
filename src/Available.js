@@ -46,7 +46,6 @@ const Available = (props) => {
                 (volsAvailableNow.length == 0) 
                  ? (<p>No volunteers available</p>) 
                  : (volsAvailableNow.map((person, index) => {
-                  console.log(person)
                   return <CurrentVols details = {person}
                                       key = {index} 
                                       today = {dayOfWeek}/>

@@ -38,6 +38,7 @@ function App() {
   //USE STATE FOR GETTING ALL VOLUNTEERS
   const [allVols, setAllVols] = useState([])
   const all = allVols;
+  
 
   //USE EFFECT FOR FETCHING ALL VOLUNTEERS 
   useEffect (()=> {
@@ -50,7 +51,7 @@ function App() {
       const data = response.val();
 
       for (let object in data) {
-        const newObject = {object, ...data[object] }  
+        const newObject = {object, ...data[object]}  
         newState.push(newObject)
       };
       setAllVols(newState)

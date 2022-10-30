@@ -9,8 +9,7 @@ const CurrentVols = (props) => {
   const phone2 = `tel: ${props.details.phone2}`
   const phone1Alt = `call ${props.details.phone1}`
   const phone2Alt = `call ${props.details.phone2}`
-  // console.log("code is here")
-  // console.log(person)
+
   return (
 
     

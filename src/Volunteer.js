@@ -12,12 +12,9 @@ const Volunteer = (props) => {
   const phone1Alt = `call ${props.details.phone1}`
   const phone2Alt = `call ${props.details.phone2}`
 
-  console.log(props.details)
-
   const handleRemoveVol = (deleteThis) => {
     const database= getDatabase(firebaseConfig);
     const databaseRef = ref(database, `/${deleteThis}`);
-    console.log(databaseRef)
     remove(databaseRef)
   }
 
