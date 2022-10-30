@@ -36,7 +36,6 @@ const Allvolunteers = (props) => {
   const [satStart, setSatStart] = useState ("");
   const [satEnd, setSatEnd] = useState ("");
   
-
   // const fullNameRef = useRef();
   // const phone1Ref = useRef();
  
@@ -70,7 +69,19 @@ const Allvolunteers = (props) => {
     setNotes("");
     setSunStart("");
     setSunEnd("");
-
+    setMonStart("");
+    setMonEnd("");
+    setTueStart("");
+    setTueEnd("");
+    setWedStart("");
+    setWedEnd("");
+    setThuStart("");
+    setThuEnd("");
+    setFriStart("");
+    setFriEnd("");
+    setSatStart("");
+    setSatEnd("");
+  
   }
 
   return (
@@ -180,7 +191,7 @@ const Allvolunteers = (props) => {
             <h4>Wednesday</h4>
             <label htmlFor="Wednesday start">Start </label>
             <input 
-              onChange={(event)=> wedStart(event.target.value)} 
+              onChange={(event)=> setWedStart(event.target.value)} 
               type="time" 
               id="time" 
               name="volunteer" 
@@ -188,7 +199,7 @@ const Allvolunteers = (props) => {
 
             <label htmlFor="Wednesday end">End </label>
             <input 
-              onChange={(event)=> wedEnd(event.target.value)} 
+              onChange={(event)=> setWedEnd(event.target.value)} 
               type="time" 
               id="time" 
               name="volunteer" 
@@ -197,7 +208,7 @@ const Allvolunteers = (props) => {
             <h4>Thursday</h4>
             <label htmlFor="Thursday start">Start </label>
             <input 
-              onChange={(event)=> thuStart(event.target.value)} 
+              onChange={(event)=> setThuStart(event.target.value)} 
               type="time" 
               id="time" 
               name="volunteer" 
@@ -205,7 +216,7 @@ const Allvolunteers = (props) => {
 
             <label htmlFor="Thursday end">End </label>
             <input 
-              onChange={(event)=> thuEnd(event.target.value)} 
+              onChange={(event)=> setThuEnd(event.target.value)} 
               type="time" 
               id="time" 
               name="volunteer" 
@@ -215,14 +226,14 @@ const Allvolunteers = (props) => {
             <h4>Friday</h4>
             <label htmlFor="Friday start">Start </label>
             <input 
-              onChange={(event)=> friStart(event.target.value)} 
+              onChange={(event)=> setFriStart(event.target.value)} 
               type="time" 
               id="time" 
               name="volunteer" 
               value={friStart}/>
             <label htmlFor="Friday end">End </label>
             <input 
-              onChange={(event)=> friEnd(event.target.value)} 
+              onChange={(event)=> setFriEnd(event.target.value)} 
               type="time" 
               id="time" 
               name="volunteer" 
@@ -232,7 +243,7 @@ const Allvolunteers = (props) => {
             <h4>Saturday</h4>
             <label htmlFor="Saturday start">Start </label>
             <input 
-              onChange={(event)=> satStart(event.target.value)} 
+              onChange={(event)=> setSatStart(event.target.value)} 
               type="time" 
               id="time" 
               name="volunteer" 
@@ -240,7 +251,7 @@ const Allvolunteers = (props) => {
 
             <label htmlFor="Saturday end">End </label>
             <input 
-              onChange={(event)=> satEnd(event.target.value)} 
+              onChange={(event)=> setSatEnd(event.target.value)} 
               type="time" 
               id="time" 
               name="volunteer" 

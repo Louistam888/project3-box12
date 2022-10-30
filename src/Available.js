@@ -14,6 +14,8 @@ const Available = (props) => {
   const minute = currentTime.getMinutes();
   const timeNow = `${hour}${minute}`
 
+ 
+
   useEffect (() => {
     const interval = () => {
 
@@ -31,8 +33,11 @@ const Available = (props) => {
   const copyOfAllVolsArray = [...allVolsArray]
 
   const volsAvailableNow = copyOfAllVolsArray.filter((person) => {
-    const availableStart = person.avail[dayOfWeek].start;
-    const availableEnd = person.avail[dayOfWeek].end;
+    const availableStart = Number((person.avail[dayOfWeek].start).replace(":", ""));
+    const availableEnd = Number((person.avail[dayOfWeek].end).replace(":", ""));
+
+    
+
 
     return availableStart <= timeNow && availableEnd >= timeNow
   })
