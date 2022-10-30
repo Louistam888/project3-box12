@@ -20,6 +20,8 @@ const CurrentVols = (props) => {
       : <p className="details">Notes: {person.notes}</p>  
       }      
 
+
+    <div className="callButtonContainer">
       {
          person.phone2 ===""
           ? <a href={phone1} className="callButton" alt={phone1Alt}>Call</a>
@@ -29,6 +31,7 @@ const CurrentVols = (props) => {
              <a href={phone2} className="callButton" alt={phone2Alt}>Call secondary</a>
             </>        
       }
+    </div>
 
       <h4>Availability Today</h4>
       <p className="details"> {todayAvailStart} to {todayAvailEnd}</p>

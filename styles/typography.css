@@ -17,7 +17,7 @@
   font-display: swap;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   width: 100%;
   font-family: "Poppins-Semibold";
   text-transform: uppercase;
@@ -50,6 +50,7 @@ h2 {
 h3 {
   font-size: 1.6rem;
   text-transform: uppercase;
+  font-family: "Poppins-Semibold";
 }
 
 .time {
@@ -57,11 +58,12 @@ h3 {
   color: #ffffff;
   text-transform: uppercase;
   font-family: "OpenSans-Bold";
-  margin-top: 10px;
+  margin: 20px 0;
 }
 
 .details {
   font-size: 1.5rem;
+  font-family: "OpenSans-Regular";
 }
 
 .aboutDetails {
@@ -71,4 +73,5 @@ h3 {
   white-space: pre-wrap;
   justify-content: center;
   margin-bottom: 8px;
+  font-family: "OpenSans-Regular";
 }

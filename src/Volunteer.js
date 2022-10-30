@@ -31,22 +31,21 @@ const Volunteer = (props) => {
         ? <p className = "details"> Tue: Not available </p>
         :<p className="details">Sun: {day.Tue.start} to {day.Tue.end}</p>
       }
+      <div className="callButtonContainer">
+        {
+          person.phone2 ===""
+            ? <>
+                <a href={phone1} className="callButton" alt={phone2Alt}>Call</a>
+              </>
+            : 
+              <>
+              <a href={phone1} className="callButton" alt={phone1Alt}>Call primary</a>
+              <a href={phone2} className="callButton" alt={phone2Alt}>Call secondary</a>
+              </>       
+        }
+      </div>
 
-
-      {
-        person.phone2 ===""
-          ? <>
-              <a href={phone1} className="callButton" alt={phone2Alt}>Call</a>
-              <button className="removeVol" onClick={()=> {handleRemoveVol(person.object)}}>Remove volunteer</button>
-           
-            </>
-          : 
-            <>
-             <a href={phone1} className="callButton" alt={phone1Alt}>Call primary</a>
-             <a href={phone2} className="callButton" alt={phone2Alt}>Call secondary</a>
-             <button className="removeVol" onClick={()=> {handleRemoveVol(person.object)}}>Remove volunteer</button>
-            </>       
-      }
+      <button className="removeVol" onClick={()=> {handleRemoveVol(person.object)}}>Remove volunteer</button>
 
       <h4>Availability</h4>
 

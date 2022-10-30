@@ -30,7 +30,7 @@ const Header = (props) => {
           <p className="time">{currentTime}</p>
           <div className="mainNumbersContainer">
             <a href="tel:123-456-7890" className="mainNumbers" alt="Call 123-456-7890">Captain's line</a>
-            <a href="tel:416-967-1111" className="mainNumbers" alt="Call 416-967-1111">TFS Comms.</a>
+            <a href="tel:416-967-1111" className="mainNumbers" alt="Call 416-967-1111">TFS Communications</a>
           </div>
         </div>
       </div>
