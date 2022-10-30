@@ -39,13 +39,35 @@ const Volunteer = (props) => {
       }
 
       <h4>Availability</h4>
-      <p className="details">Sun: {day.Sun.start} to {day.Sun.end}</p>
-      <p className="details">Mon: {day.Mon.start} to {day.Mon.end}</p>
-      <p className="details">Tue: {day.Tue.start} to {day.Tue.end}</p>
-      <p className="details">Wed: {day.Wed.start} to {day.Wed.end}</p>
-      <p className="details">Thu: {day.Thu.start} to {day.Thu.end}</p>
-      <p className="details">Fri: {day.Fri.start} to {day.Fri.end}</p>
-      <p className="details">Sat: {day.Sat.start} to {day.Sat.end}</p>
+
+      { `${day.Sun.start}` == 0 
+        ? <p className = "details"> Not available </p>
+        :<p className="details">Sun: {day.Sun.start} to {day.Sun.end}</p>
+      }
+      { `${day.Mon.start}` == 0 
+        ? <p className = "details"> Not available </p>
+        :<p className="details">Sun: {day.Mon.start} to {day.Mon.end}</p>
+      }
+      { `${day.Tue.start}` == 0 
+        ? <p className = "details"> Not available </p>
+        :<p className="details">Sun: {day.Tue.start} to {day.Tue.end}</p>
+      }
+      { `${day.Wed.start}` == 0 
+        ? <p className = "details"> Not available </p>
+        :<p className="details">Sun: {day.Wed.start} to {day.Wed.end}</p>
+      }
+      { `${day.Thu.start}` == 0 
+        ? <p className = "details"> Not available </p>
+        :<p className="details">Sun: {day.Thu.start} to {day.Thu.end}</p>
+      }
+      { `${day.Fri.start}` == 0 
+        ? <p className = "details"> Not available </p>
+        :<p className="details">Sun: {day.Fri.start} to {day.Fri.end}</p>
+      }
+      { `${day.Sat.start}` == 0 
+        ? <p className = "details"> Not available </p>
+        :<p className="details">Sun: {day.Sat.start} to {day.Sat.end}</p>
+      }
     </li>
   )
 }
