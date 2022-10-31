@@ -10,7 +10,7 @@ const Available = (props) => {
   const currentTime = new Date(day); 
   const dayOfWeek = currentTime.toLocaleString("en-CA", {timeZone: "America/Toronto", weekday: "short"});
 
-
+ 
   let hour = currentTime.getHours(); 
   hour = hour <= 9 
           ? "0" + hour 
@@ -21,8 +21,7 @@ const Available = (props) => {
             ? "0" + minute 
             : minute;  
         
-  const timeNowRaw = `${hour}${minute}`
-  const timeNow = Number(timeNowRaw)
+  const timeNow = `${hour}${minute}`
 
   useEffect (() => {
     const interval = () => {
@@ -44,7 +43,7 @@ const Available = (props) => {
     const availableStart = Number((person.avail[dayOfWeek].start).replace(":", ""));
     const availableEnd = Number((person.avail[dayOfWeek].end).replace(":", ""));
 
-    return availableStart < timeNow && availableEnd > timeNow
+    return availableStart <= timeNow && availableEnd > timeNow
   })
 
   return (
