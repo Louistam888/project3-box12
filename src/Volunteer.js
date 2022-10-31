@@ -44,31 +44,31 @@ const Volunteer = (props) => {
 
       <h4>Availability</h4>
 
-        { `${day.Sun.start}` == "" || `${day.Sun.end}` ==""
+        { `${day.Sun.start}` === "" || `${day.Sun.end}` ===""
           ? <p className = "timeDetails"> Sun: Not available </p>
           :<p className="timeDetails">Sun: {day.Sun.start} to {day.Sun.end}</p>
         }
-        { `${day.Mon.start}` == "" || `${day.Mon.end}` == ""
+        { `${day.Mon.start}` === "" || `${day.Mon.end}` === ""
           ? <p className = "timeDetails"> Mon: Not available </p>
           :<p className="timeDetails">Mon: {day.Mon.start} to {day.Mon.end}</p>
         }
-        { `${day.Tue.start}` == "" || `${day.Tue.end}` == ""
+        { `${day.Tue.start}` === "" || `${day.Tue.end}` === ""
           ? <p className = "timeDetails"> Tue: Not available </p>
           :<p className="timeDetails">Tue: {day.Tue.start} to {day.Tue.end}</p>
         }
-        { `${day.Wed.start}` == "" || `${day.Wed.end}` == ""
+        { `${day.Wed.start}` === "" || `${day.Wed.end}` === ""
           ? <p className = "timeDetails"> Wed: Not available </p>
           :<p className="timeDetails">Wed: {day.Wed.start} to {day.Wed.end}</p>
         }
-        { `${day.Thu.start}` == "" || `${day.Thu.end}` == ""
+        { `${day.Thu.start}` === "" || `${day.Thu.end}` === ""
           ? <p className = "timeDetails"> Thu: Not available </p>
           :<p className="timeDetails">Thu: {day.Thu.start} to {day.Thu.end}</p>
         }
-        { `${day.Fri.start}` == "" || `${day.Fri.end}` == ""
+        { `${day.Fri.start}` === "" || `${day.Fri.end}` === ""
           ? <p className = "timeDetails"> Fri: Not available </p>
           :<p className="timeDetails">Fri: {day.Fri.start} to {day.Fri.end}</p>
         }
-        { `${day.Sat.start}` == "" || `${day.Sat.end}` == ""
+        { `${day.Sat.start}` === "" || `${day.Sat.end}` === ""
           ? <p className = "timeDetails"> Sat: Not available </p>
           :<p className="timeDetails">Sat: {day.Sat.start} to {day.Sat.end}</p>
         }
