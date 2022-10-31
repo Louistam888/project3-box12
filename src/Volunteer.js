@@ -21,7 +21,7 @@ const Volunteer = (props) => {
     <li className="vol">
       <h3>{person.fullName}</h3>
 
-      { `${person.notes}` == 0
+      { `${person.notes}` === ""
       ? <p className="details">Notes: N/A</p>
       : <p className="details">Notes: {person.notes}</p>  
       }     
