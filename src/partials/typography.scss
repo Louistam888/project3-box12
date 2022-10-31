@@ -32,6 +32,9 @@ h3 {
   font-size: 1.6rem;
   text-transform: uppercase;
   font-family: $mainAccent;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 h4 {

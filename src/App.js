@@ -65,11 +65,14 @@ function App() {
       });
   }
    
+  //function for fetching current Time
+  const updatedTime = new Date().toLocaleString("en-CA", {timeZone: "America/Toronto", year:"numeric", month:"short", weekday: "short", day:"numeric", hour12:false, hour: "numeric", minute:"2-digit", second: "2-digit" });   
 
   return (
 
     <div className="app">
-      <Header handleAccordion = {accordion}/>
+      <Header handleAccordion = {accordion}
+              updatedTime = {updatedTime}/>
       <div>
         <Available list = {all} />
         <Allvolunteers list = {all}
