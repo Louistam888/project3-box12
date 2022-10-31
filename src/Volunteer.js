@@ -3,10 +3,6 @@ import {getDatabase, ref, remove} from "firebase/database";
 
 const Volunteer = (props) => {
 
-const currentTime = new Date(); 
-const dayOfWeek = currentTime.toLocaleString("en-CA", {timeZone: "America/Toronto", weekday: "short"});
-
-
   const person = props.details; 
   const day = props.details.avail;
 
