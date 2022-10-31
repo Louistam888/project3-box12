@@ -28,8 +28,8 @@ const Volunteer = (props) => {
       }     
 
       { `${day.Tue.start}` == 0 || `${day.Tue.end}` == 0
-        ? <p className = "details"> Tue: Not available </p>
-        :<p className="details">Sun: {day.Tue.start} to {day.Tue.end}</p>
+        ? <p className = "timeDetails"> Tue: Not available </p>
+        :<p className="timeDetails">Sun: {day.Tue.start} to {day.Tue.end}</p>
       }
       <div className="callButtonContainer">
         {
@@ -49,34 +49,36 @@ const Volunteer = (props) => {
 
       <h4>Availability</h4>
 
-      { `${day.Sun.start}` == 0 || `${day.Sun.end}` == 0
-        ? <p className = "details"> Sun: Not available </p>
-        :<p className="details">Sun: {day.Sun.start} to {day.Sun.end}</p>
-      }
-      { `${day.Mon.start}` == 0 || `${day.Mon.end}` == 0
-        ? <p className = "details"> Mon: Not available </p>
-        :<p className="details">Sun: {day.Mon.start} to {day.Mon.end}</p>
-      }
-      { `${day.Tue.start}` == 0 || `${day.Tue.end}` == 0
-        ? <p className = "details"> Tue: Not available </p>
-        :<p className="details">Sun: {day.Tue.start} to {day.Tue.end}</p>
-      }
-      { `${day.Wed.start}` == 0 || `${day.Wed.end}` == 0
-        ? <p className = "details"> Wed: Not available </p>
-        :<p className="details">Sun: {day.Wed.start} to {day.Wed.end}</p>
-      }
-      { `${day.Thu.start}` == 0 || `${day.Thu.end}` == 0
-        ? <p className = "details"> Thu: Not available </p>
-        :<p className="details">Sun: {day.Thu.start} to {day.Thu.end}</p>
-      }
-      { `${day.Fri.start}` == 0 || `${day.Fri.end}` == 0
-        ? <p className = "details"> Fri: Not available </p>
-        :<p className="details">Sun: {day.Fri.start} to {day.Fri.end}</p>
-      }
-      { `${day.Sat.start}` == 0 || `${day.Sat.end}` == 0
-        ? <p className = "details"> Sat: Not available </p>
-        :<p className="details">Sun: {day.Sat.start} to {day.Sat.end}</p>
-      }
+
+        { `${day.Sun.start}` == 0 || `${day.Sun.end}` == 0
+          ? <p className = "timeDetails"> Sun: Not available </p>
+          :<p className="timeDetails">Sun: {day.Sun.start} to {day.Sun.end}</p>
+        }
+        { `${day.Mon.start}` == 0 || `${day.Mon.end}` == 0
+          ? <p className = "timeDetails"> Mon: Not available </p>
+          :<p className="timeDetails">Sun: {day.Mon.start} to {day.Mon.end}</p>
+        }
+        { `${day.Tue.start}` == 0 || `${day.Tue.end}` == 0
+          ? <p className = "timeDetails"> Tue: Not available </p>
+          :<p className="timeDetails">Sun: {day.Tue.start} to {day.Tue.end}</p>
+        }
+        { `${day.Wed.start}` == 0 || `${day.Wed.end}` == 0
+          ? <p className = "timeDetails"> Wed: Not available </p>
+          :<p className="timeDetails">Sun: {day.Wed.start} to {day.Wed.end}</p>
+        }
+        { `${day.Thu.start}` == 0 || `${day.Thu.end}` == 0
+          ? <p className = "timeDetails"> Thu: Not available </p>
+          :<p className="timeDetails">Sun: {day.Thu.start} to {day.Thu.end}</p>
+        }
+        { `${day.Fri.start}` == 0 || `${day.Fri.end}` == 0
+          ? <p className = "timeDetails"> Fri: Not available </p>
+          :<p className="timeDetails">Sun: {day.Fri.start} to {day.Fri.end}</p>
+        }
+        { `${day.Sat.start}` == 0 || `${day.Sat.end}` == 0
+          ? <p className = "timeDetails"> Sat: Not available </p>
+          :<p className="timeDetails">Sun: {day.Sat.start} to {day.Sat.end}</p>
+        }
+   
     </li>
   )
 }

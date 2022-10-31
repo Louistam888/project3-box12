@@ -34,7 +34,7 @@ const CurrentVols = (props) => {
     </div>
 
       <h4>Availability Today</h4>
-      <p className="details"> {todayAvailStart} to {todayAvailEnd}</p>
+      <p className="timeDetails"> {todayAvailStart} to {todayAvailEnd}</p>
     </li>
   )
 }

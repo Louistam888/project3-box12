@@ -16,7 +16,13 @@
   font-weight: 500;
   font-display: swap;
 }
-.accordionItemHeader {
+.accordion {
+  width: 100%;
+}
+
+.accordionItemHeader,
+.accordionItemHeader2,
+.accordionItemHeader3 {
   cursor: pointer;
   position: relative;
   color: #ffffff;
@@ -24,9 +30,15 @@
   align-items: center;
   background-color: #161515;
   justify-content: center;
+  border-bottom: 2px solid grey;
 }
 
-.accordionItemHeader::after, .accordionItemHeader.active::after {
+.accordionItemHeader::after,
+.accordionItemHeader.active::after,
+.accordionItemHeader2::after,
+.accordionItemHeader2.active::after,
+.accordionItemHeader3::after,
+.accordionItemHeader3.active::after {
   font-size: 3rem;
   position: absolute;
   right: 5%;
@@ -38,16 +50,19 @@
   padding: 0 10px;
 }
 
-.accordionItemHeader::after {
+.accordionItemHeader::after,
+.accordionItemHeader2::after,
+.accordionItemHeader3::after {
   content: "+";
 }
 
-.accordionItemHeader.active::after {
+.accordionItemHeader.active::after,
+.accordionItemHeader2.active::after,
+.accordionItemHeader3.active::after {
   content: "-";
 }
 
 .accordionContent {
-  padding: 10px;
   color: #161515;
   font-size: 1.5rem;
   font-family: "OpenSans-Regular";

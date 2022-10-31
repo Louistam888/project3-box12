@@ -47,7 +47,7 @@ const Available = (props) => {
             <ul className="allVols">
               {
                 (volsAvailableNow.length == 0) 
-                 ? (<p>No volunteers available</p>) 
+                 ? (<p className="none">No volunteers available</p>) 
                  : (volsAvailableNow.map((person, index) => {
                   return <CurrentVols details = {person}
                                       key = {index} 

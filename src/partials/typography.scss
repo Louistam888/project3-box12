@@ -1,62 +1,81 @@
 @import "./variables.scss";
 
-  h1 {
-    font-size: 3.5rem;
-    width: 100%;
-    font-family: $mainAccent;
-    text-transform: uppercase;
-    color: $TFSred;
-    text-shadow: -1px -1px 0 $TFSwhite, 1px -1px 0 $TFSwhite, -1px 1px 0 $TFSwhite, 1px 1px 0 $TFSwhite;
-    margin-bottom: 10px;
-    padding: 0;
-  }
+h1 {
+  font-size: 3.5rem;
+  width: 100%;
+  font-family: $mainAccent;
+  text-transform: uppercase;
+  color: $TFSred;
+  text-shadow: -1px -1px 0 $TFSwhite, 1px -1px 0 $TFSwhite, -1px 1px 0 $TFSwhite, 1px 1px 0 $TFSwhite;
+  margin-bottom: 10px;
+  padding: 0;
+}
 
-  h2 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: $mainAccent;
-    text-transform: uppercase;
-    color: $TFSwhite;
-    padding: 15px;
-    font-size: 1.8rem;
-  }
+h2, .h2Red {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: $mainAccent;
+  text-transform: uppercase;
+  color: $TFSwhite;
+  padding: 15px;
+  font-size: 1.8rem;
+}
 
-  .h2Black {
-    background-color: $black;
-  }
+.h2Red {
+  background-color: $TFSred;
+  border: none;
+}
 
-  .h2Red {
-    background-color: $TFSred;
-  }
+h3 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-family: $mainAccent;
+}
 
-  h3 {
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    font-family: $mainAccent;
-  }
+h4 {
+  font-family: $mainAccent;
+  font-size: 1.6rem;
+}
 
-  .time {
-    font-size: 1.6rem; 
-    color: $TFSwhite;   
-    text-transform: uppercase;
-    font-family: $bodyBold;
-    margin: 20px 0;
-  }
+.time {
+  font-size: 1.6rem; 
+  color: $TFSwhite;   
+  text-transform: uppercase;
+  font-family: $bodyBold;
+  margin: 20px 0;
+}
 
-  .details {
-    font-size: 1.5rem;
-    font-family: $bodyText;
-  }
+.details, .timeDetails{
+  font-size: 1.5rem;
+  font-family: $bodyText;
+  white-space: pre-line;
+}
 
-  .aboutDetails {
-    display: flex;
-    font-size: 1.5rem;
-    text-align: center;
-    white-space: pre-wrap;
-    justify-content: center;
-    margin-bottom: 8px;
-    font-family: $bodyText;
-  }
 
+.timeDetails {
+  text-align: center;
+}
+
+.aboutDetails {
+  display: flex;
+  font-size: 1.5rem;
+  text-align: center;
+  white-space: pre-wrap;
+  justify-content: center;
+  margin-bottom: 8px;
+  font-family: $bodyText;
+}
+
+.addNewVolText {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.none {
+  font-size: 3rem;
+  margin: 20px;
+}

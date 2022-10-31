@@ -1,19 +1,29 @@
 @import "./variables.scss";
 
+.accordion {
+  width: 100%;
+}
 
-.accordionItemHeader {
+.accordionItemHeader, 
+.accordionItemHeader2,
+.accordionItemHeader3 {
   cursor: pointer;
   position: relative;
   color: $TFSwhite;
   display: flex;
   align-items: center;
   background-color: $black;
-
-  justify-content: center;
+  justify-content: center; 
+  border-bottom: 2px solid grey;
 }
 
-
-.accordionItemHeader::after, .accordionItemHeader.active::after {
+.accordionItemHeader::after, 
+.accordionItemHeader.active::after, 
+.accordionItemHeader2::after, 
+.accordionItemHeader2.active::after,
+.accordionItemHeader3::after, 
+.accordionItemHeader3.active::after
+ {
   font-size: 3rem;
   position: absolute;
   right: 5%;
@@ -25,16 +35,19 @@
   padding: 0 10px;
 }
 
-.accordionItemHeader::after {
+.accordionItemHeader::after, 
+.accordionItemHeader2::after,
+.accordionItemHeader3::after {
   content: "\002B";
 }
 
-.accordionItemHeader.active::after {
+.accordionItemHeader.active::after, 
+.accordionItemHeader2.active::after,
+.accordionItemHeader3.active::after {
   content: "\002D";   
 }
 
 .accordionContent {
-  padding: 10px;
   color: $black;
   font-size: 1.5rem;
   font-family: $bodyText;

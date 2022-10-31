@@ -4,6 +4,8 @@ import './App.css';
 import Header from "./Header";
 import Available from './Available';
 import Allvolunteers from "./Allvolunteers";
+import Addnewvol from "./Addnewvol";
+import About from "./About";
 
 //SASS
 import "./partials/setup.scss";
@@ -46,9 +48,9 @@ function App() {
   }, []);
 
 
-  const accordion = () => {
+  const accordion = (param) => {
 
-    accordion.accordionItemHeader = document.querySelectorAll(".accordionItemHeader");
+    accordion.accordionItemHeader = document.querySelectorAll(param);
     accordion.accordionItemHeader.forEach(header => {
       
         header.classList.toggle("active");
@@ -70,11 +72,12 @@ function App() {
       <Header handleAccordion = {accordion}/>
       <div>
         <Available list = {all} />
-        <Allvolunteers list = {all} />
+        <Allvolunteers list = {all}
+                       handleAccordion ={accordion} />
+        <Addnewvol handleAccordion={accordion}/>
+        <About handleAccordion={accordion} />
       </div>
     </div>
-
-   
   );
 }
 
