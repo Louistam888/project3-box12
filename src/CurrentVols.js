@@ -1,7 +1,6 @@
 const CurrentVols = (props) => {
 
   const person = props.details; 
-  const day = props.details.avail;
   const today = props.today;
   const todayAvailStart = props.details.avail[today].start;
   const todayAvailEnd = props.details.avail[today].end;
@@ -23,7 +22,7 @@ const CurrentVols = (props) => {
 
     <div className="callButtonContainer">
       {
-         person.phone2 ===""
+         !person.phone2 
           ? <a href={phone1} className="callButton" alt={phone1Alt}>Call</a>
           : 
             <>

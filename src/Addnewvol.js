@@ -1,7 +1,6 @@
-
 import {useState} from "react";
 import firebaseConfig from "./firebase";
-import {getDatabase, ref, onValue, push} from "firebase/database";
+import {getDatabase, ref, push} from "firebase/database";
 
 const Addnewvol = (props) => {
 

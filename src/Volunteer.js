@@ -1,16 +1,19 @@
 import firebaseConfig from "./firebase";
 import {getDatabase, ref, remove} from "firebase/database"; 
-import {useState, useEffect} from "react";
 
 const Volunteer = (props) => {
+
+const currentTime = new Date(); 
+const dayOfWeek = currentTime.toLocaleString("en-CA", {timeZone: "America/Toronto", weekday: "short"});
+
 
   const person = props.details; 
   const day = props.details.avail;
 
-  const phone1 = `tel: ${props.details.phone1}`
-  const phone2 = `tel: ${props.details.phone2}`
-  const phone1Alt = `call ${props.details.phone1}`
-  const phone2Alt = `call ${props.details.phone2}`
+  const phone1 = `tel: ${props.details.phone1}`;
+  const phone2 = `tel: ${props.details.phone2}`;
+  const phone1Alt = `call ${props.details.phone1}`;
+  const phone2Alt = `call ${props.details.phone2}`;
 
   const handleRemoveVol = (deleteThis) => {
     const database= getDatabase(firebaseConfig);
@@ -27,13 +30,9 @@ const Volunteer = (props) => {
       : <p className="details">Notes: {person.notes}</p>  
       }     
 
-      { `${day.Tue.start}` == 0 || `${day.Tue.end}` == 0
-        ? <p className = "timeDetails"> Tue: Not available </p>
-        :<p className="timeDetails">Sun: {day.Tue.start} to {day.Tue.end}</p>
-      }
       <div className="callButtonContainer">
         {
-          person.phone2 ===""
+          !person.phone2
             ? <>
                 <a href={phone1} className="callButton" alt={phone2Alt}>Call</a>
               </>
@@ -49,34 +48,33 @@ const Volunteer = (props) => {
 
       <h4>Availability</h4>
 
-
-        { `${day.Sun.start}` == 0 || `${day.Sun.end}` == 0
+        { `${day.Sun.start}` == "" || `${day.Sun.end}` ==""
           ? <p className = "timeDetails"> Sun: Not available </p>
           :<p className="timeDetails">Sun: {day.Sun.start} to {day.Sun.end}</p>
         }
-        { `${day.Mon.start}` == 0 || `${day.Mon.end}` == 0
+        { `${day.Mon.start}` == "" || `${day.Mon.end}` == ""
           ? <p className = "timeDetails"> Mon: Not available </p>
-          :<p className="timeDetails">Sun: {day.Mon.start} to {day.Mon.end}</p>
+          :<p className="timeDetails">Mon: {day.Mon.start} to {day.Mon.end}</p>
         }
-        { `${day.Tue.start}` == 0 || `${day.Tue.end}` == 0
+        { `${day.Tue.start}` == "" || `${day.Tue.end}` == ""
           ? <p className = "timeDetails"> Tue: Not available </p>
-          :<p className="timeDetails">Sun: {day.Tue.start} to {day.Tue.end}</p>
+          :<p className="timeDetails">Tue: {day.Tue.start} to {day.Tue.end}</p>
         }
-        { `${day.Wed.start}` == 0 || `${day.Wed.end}` == 0
+        { `${day.Wed.start}` == "" || `${day.Wed.end}` == ""
           ? <p className = "timeDetails"> Wed: Not available </p>
-          :<p className="timeDetails">Sun: {day.Wed.start} to {day.Wed.end}</p>
+          :<p className="timeDetails">Wed: {day.Wed.start} to {day.Wed.end}</p>
         }
-        { `${day.Thu.start}` == 0 || `${day.Thu.end}` == 0
+        { `${day.Thu.start}` == "" || `${day.Thu.end}` == ""
           ? <p className = "timeDetails"> Thu: Not available </p>
-          :<p className="timeDetails">Sun: {day.Thu.start} to {day.Thu.end}</p>
+          :<p className="timeDetails">Thu: {day.Thu.start} to {day.Thu.end}</p>
         }
-        { `${day.Fri.start}` == 0 || `${day.Fri.end}` == 0
+        { `${day.Fri.start}` == "" || `${day.Fri.end}` == ""
           ? <p className = "timeDetails"> Fri: Not available </p>
-          :<p className="timeDetails">Sun: {day.Fri.start} to {day.Fri.end}</p>
+          :<p className="timeDetails">Fri: {day.Fri.start} to {day.Fri.end}</p>
         }
-        { `${day.Sat.start}` == 0 || `${day.Sat.end}` == 0
+        { `${day.Sat.start}` == "" || `${day.Sat.end}` == ""
           ? <p className = "timeDetails"> Sat: Not available </p>
-          :<p className="timeDetails">Sun: {day.Sat.start} to {day.Sat.end}</p>
+          :<p className="timeDetails">Sat: {day.Sat.start} to {day.Sat.end}</p>
         }
    
     </li>
