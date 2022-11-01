@@ -19,7 +19,7 @@ const About = (props)=> {
                 <div className="accordionContent">
 
                   <h3>What does this app do?</h3>
-                  <p className="aboutDetails">This mobile app streamlines dispatching of on-call volunteers for the Box 12 Association, who staff a canteen vehicle for Toronto Fire Services. All currently available volunteers are updated every 10 seconds. </p>
+                  <p className="aboutDetails">This mobile app streamlines dispatching of on-call volunteers for the Box 12 Association, who staff a canteen vehicle for Toronto Fire Services. All currently available volunteers are updated every 10 seconds. Contact information for TFS communications is also conveniently located in the header of this app.</p>
                 
                   <p className="aboutDetails"> <strong>PLEASE NOTE: This is a demonstration version of the app, and contains no confidential contact information.</strong></p>
                 </div>
