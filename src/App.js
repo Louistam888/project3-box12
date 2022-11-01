@@ -13,10 +13,11 @@ import "./partials/typography.scss";
 import "./partials/header.scss";
 import "./partials/allVolunteers.scss";
 import "./partials/available.scss";
-import "./partials/currentVols.scss";
 import "./partials/mediaQueries.scss";
 import "./partials/volunteer.scss";
 import "./partials/accordion.scss";
+import "./partials/addNewVol.scss";
+
 
 import firebaseConfig from "./firebase";
 import {getDatabase, ref, onValue} from "firebase/database"; 
@@ -64,15 +65,11 @@ function App() {
         }
       });
   }
-   
-  //function for fetching current Time
-  const updatedTime = new Date().toLocaleString("en-CA", {timeZone: "America/Toronto", year:"numeric", month:"short", weekday: "short", day:"numeric", hour12:false, hour: "numeric", minute:"2-digit", second: "2-digit" });   
 
   return (
 
     <div className="app">
-      <Header handleAccordion = {accordion}
-              updatedTime = {updatedTime}/>
+      <Header handleAccordion = {accordion} />
       <div>
         <Available list = {all} />
         <Allvolunteers list = {all}

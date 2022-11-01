@@ -36,6 +36,7 @@ header {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 .mainNumbersContainer .mainNumbers {
   background-color: #ec1d24;

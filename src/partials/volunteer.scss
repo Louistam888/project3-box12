@@ -20,7 +20,7 @@
   flex-direction: column;
 }
 
-.callButton, .removeVol {
+.callButton, .removeVol, .submitVol {
     border: 1px solid $black;
     color: $TFSwhite;
     text-decoration: none; 
@@ -37,7 +37,7 @@
     align-items: center;
 }
 
-.callButton {
+.callButton, .submitVol {
   background-color: $green;
 }
 
@@ -45,7 +45,7 @@
   background-color: $TFSred;
   cursor: pointer;
 }
-.callButton:active, .removeVol:active {
+.callButton:active, .removeVol:active, .submitVol:active {
   animation: push 0.5s ease-in-out;
 }
 

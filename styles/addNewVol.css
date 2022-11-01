@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(150, 149, 149);
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.contactInfo, .timeInfo {
+  width: 100%;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  color: #161515;
+  margin-bottom: 10px;
+  border: 1px solid #161515;
+  font-family: "OpenSans-Regular";
+}
+
+.contactInfo {
+  padding: 5px;
+}
+
+.timeInfo {
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+label {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+fieldset {
+  width: 100%;
+  text-align: center;
+  border-color: #161515;
+  margin: 5px;
+}
+
+legend {
+  margin: 0 auto;
+}
+
+.submitVol {
+  cursor: pointer;
+}

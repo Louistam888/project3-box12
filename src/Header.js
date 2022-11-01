@@ -5,9 +5,7 @@ const Header = (props) => {
     //USE STATE FOR FETCHING CURRENT TIME 
     const [time, setTime] = useState("")
     const currentTime = time; 
-
-    
-
+  
     useEffect (() => {
       const interval = () => {
         const date = new Date().toLocaleString("en-CA", {timeZone: "America/Toronto", year:"numeric", month:"short", weekday: "short", day:"numeric", hour12:false, hour: "numeric", minute:"2-digit", second: "2-digit" });   

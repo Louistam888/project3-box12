@@ -1,0 +1,54 @@
+@import "./variables.scss";
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(150, 149, 149);
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+
+.contactInfo, .timeInfo {
+  width: 100%;
+  
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  color: $black;
+  margin-bottom: 10px;
+  border: 1px solid $black;
+  font-family: $bodyText;
+}
+
+.contactInfo {
+  padding: 5px; 
+}
+
+.timeInfo {
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+label {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+fieldset {
+  width: 100%;
+  text-align: center;
+  border-color: $black;
+  margin: 5px;
+}
+
+legend {
+  margin: 0 auto;
+}
+
+.submitVol {
+  cursor: pointer;
+}
+//styling for .submitVol is under volunteer.scss

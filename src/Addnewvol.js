@@ -97,161 +97,202 @@ const Addnewvol = (props) => {
               </p>
             </div>
             
-              <form action="submit">
+            <form action="submit">
 
-                <label htmlFor="full name">Full Name</label>
-                <input 
-                  onChange={(event)=> setFullName(event.target.value)} 
-                  value={fullName} 
-                  type="text" 
-                  id="name" 
-                  name="volunteer" 
-                  required />
+              <h3 className="h3Form">profile info</h3>
 
-                <label htmlFor="phone 1">Primary phone</label>
-                <input 
-                  onChange={(event)=> setPhone1(event.target.value)}  
-                  value={phone1} 
-                  type="tel" 
-                  id="phone1" 
-                  name="volunteer" required/> 
+              <label htmlFor="full name"><h4>Full Name</h4></label>
+              <input 
+                onChange={(event)=> setFullName(event.target.value)} 
+                value={fullName} 
+                type="text" 
+                id="name" 
+                name="volunteer" 
+                required 
+                className="contactInfo"
+                placeholder="i.e. Matt Pegg"/>
 
-                <label htmlFor="phone 2">Secondary phone (optional)</label>
-                <input 
-                  onChange={(event)=> setPhone2(event.target.value)}  
-                  value={phone2}
-                  type="tel" 
-                  id="phone2" 
-                  name="volunteer" />
+              <label htmlFor="phone 1"><h4>Primary Phone</h4></label>
+              <input 
+                onChange={(event)=> setPhone1(event.target.value)}  
+                value={phone1} 
+                type="tel" 
+                id="phone1" 
+                name="volunteer" required
+                className="contactInfo"
+                placeholder="i.e. 416-123-4567"/> 
 
-                <label htmlFor="notes">notes (optional)</label>
-                <input 
-                  onChange={(event)=> setNotes(event.target.value)} 
-                  value={notes}
-                  type="text" 
-                  id="name" 
-                  name="volunteer" />
+              <label htmlFor="phone 2"><h4>Secondary Phone (optional)</h4></label>
+              <input 
+                onChange={(event)=> setPhone2(event.target.value)}  
+                value={phone2}
+                type="tel" 
+                id="phone2" 
+                name="volunteer"
+                className="contactInfo"
+                placeholder="i.e. 416-123-4567"/>
 
-                <h4>Sunday</h4>
-                <label htmlFor="Sunday start">Start </label>
-                <input 
-                  onChange={(event)=> setSunStart(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={sunStart}/>
+              <label htmlFor="notes"><h4>Notes (optional)</h4></label>
+              <input 
+                onChange={(event)=> setNotes(event.target.value)} 
+                value={notes}
+                type="text" 
+                id="name" 
+                name="volunteer" 
+                className="contactInfo"
+                placeholder="i.e. send text if no answer"/>
 
-                <label htmlFor="Sunday end">End </label>
-                <input 
-                  onChange={(event)=> setSunEnd(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={sunEnd}/>
+            
+              <h3 className="h3Form">availability</h3>
 
+              <fieldset>
+                <legend><h4>Sunday</h4></legend>            
+                  <label htmlFor="Sunday start"><h5>Start</h5></label>
+                  <input 
+                    onChange={(event)=> setSunStart(event.target.value)} 
+                    type="time" 
+                    id="time" 
+                    name="volunteer" 
+                    value={sunStart}
+                    className="timeInfo"
+                    />       
 
-                <h4>Monday</h4>
-                <label htmlFor="Monday start">Start </label>
+                  <label htmlFor="Sunday end"><h5>End</h5></label>
+                  <input 
+                    onChange={(event)=> setSunEnd(event.target.value)} 
+                    type="time" 
+                    id="time" 
+                    name="volunteer" 
+                    value={sunEnd}
+                    className="timeInfo"/>
+              </fieldset>
+
+              <fieldset>
+                <legend><h4>Monday</h4></legend>
+                <label htmlFor="Monday start"><h5>Start</h5></label>
                 <input 
                   onChange={(event)=> setMonStart(event.target.value)} 
                   type="time" 
                   id="time" 
                   name="volunteer" 
-                  value={monStart}/>
+                  value={monStart}
+                  className="timeInfo"/>
 
-                <label htmlFor="Monday end">End </label>
+                <label htmlFor="Monday end"><h5>End</h5></label>
                 <input 
                   onChange={(event)=> setMonEnd(event.target.value)} 
                   type="time" 
                   id="time" 
                   name="volunteer" 
-                  value={monEnd}/>
+                  value={monEnd}
+                  className="timeInfo"/>
+              </fieldset>  
 
-                <h4>Tuesday</h4>
-                <label htmlFor="Tuesday start">Start </label>
-                <input 
-                  onChange={(event)=> setTueStart(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={tueStart}/>
+            <fieldset>
+              <legend><h4>Tuesday</h4></legend>
+              <label htmlFor="Tuesday start"><h5>Start</h5></label>
+              <input 
+                onChange={(event)=> setTueStart(event.target.value)} 
+                type="time" 
+                id="time" 
+                name="volunteer" 
+                value={tueStart}
+                className="timeInfo"/>
 
-                <label htmlFor="Tuesday end">End </label>
-                <input 
-                  onChange={(event)=> setTueEnd(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={tueEnd}/>
+              <label htmlFor="Tuesday end"><h5>End</h5></label>
+              <input 
+                onChange={(event)=> setTueEnd(event.target.value)} 
+                type="time" 
+                id="time" 
+                name="volunteer" 
+                value={tueEnd}
+                className="timeInfo"/>
+            </fieldset>
 
-                <h4>Wednesday</h4>
-                <label htmlFor="Wednesday start">Start </label>
-                <input 
-                  onChange={(event)=> setWedStart(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={wedStart}/>
+            <fieldset>
+              <legend><h4>Wednesday</h4></legend>
+              <label htmlFor="Wednesday start"><h5>Start</h5></label>
+              <input 
+                onChange={(event)=> setWedStart(event.target.value)} 
+                type="time" 
+                id="time" 
+                name="volunteer" 
+                value={wedStart}
+                className="timeInfo"/>
 
-                <label htmlFor="Wednesday end">End </label>
-                <input 
-                  onChange={(event)=> setWedEnd(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={wedEnd}/>
+              <label htmlFor="Wednesday end"><h5>End</h5></label>
+              <input 
+                onChange={(event)=> setWedEnd(event.target.value)} 
+                type="time" 
+                id="time" 
+                name="volunteer" 
+                value={wedEnd}
+                className="timeInfo"/>
+            </fieldset>
 
-                <h4>Thursday</h4>
-                <label htmlFor="Thursday start">Start </label>
-                <input 
-                  onChange={(event)=> setThuStart(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={thuStart}/>
+            <fieldset>
+              <legend><h4>Thursday</h4></legend>
+              <label htmlFor="Thursday start"><h5>Start</h5></label>
+              <input 
+                onChange={(event)=> setThuStart(event.target.value)} 
+                type="time" 
+                id="time" 
+                name="volunteer" 
+                value={thuStart}
+                className="timeInfo"/>
 
-                <label htmlFor="Thursday end">End </label>
-                <input 
-                  onChange={(event)=> setThuEnd(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={thuEnd}/>
+              <label htmlFor="Thursday end"><h5>End</h5></label>
+              <input 
+                onChange={(event)=> setThuEnd(event.target.value)} 
+                type="time" 
+                id="time" 
+                name="volunteer" 
+                value={thuEnd}
+                className="timeInfo"/>
+            </fieldset>
 
-                <h4>Friday</h4>
-                <label htmlFor="Friday start">Start </label>
-                <input 
-                  onChange={(event)=> setFriStart(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={friStart}/>
-                <label htmlFor="Friday end">End </label>
-                <input 
-                  onChange={(event)=> setFriEnd(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={friEnd}/>
+            <fieldset>
+              <legend><h4>Friday</h4></legend>
+              <label htmlFor="Friday start"><h5>Start</h5></label>
+              <input 
+                onChange={(event)=> setFriStart(event.target.value)} 
+                type="time" 
+                id="time" 
+                name="volunteer" 
+                value={friStart}
+                className="timeInfo"/>
+              <label htmlFor="Friday end"><h5>End</h5></label>
+              <input 
+                onChange={(event)=> setFriEnd(event.target.value)} 
+                type="time" 
+                id="time" 
+                name="volunteer" 
+                value={friEnd}
+                className="timeInfo"/>
+            </fieldset>
 
-                <h4>Saturday</h4>
-                <label htmlFor="Saturday start">Start </label>
-                <input 
-                  onChange={(event)=> setSatStart(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={satStart}/>
+            <fieldset>
+              <legend><h4>Saturday</h4></legend>
+              <label htmlFor="Saturday start"><h5>Start</h5></label>
+              <input 
+                onChange={(event)=> setSatStart(event.target.value)} 
+                type="time" 
+                id="time" 
+                name="volunteer" 
+                value={satStart}
+                className="timeInfo"/>
 
-                <label htmlFor="Saturday end">End </label>
-                <input 
-                  onChange={(event)=> setSatEnd(event.target.value)} 
-                  type="time" 
-                  id="time" 
-                  name="volunteer" 
-                  value={satEnd}/>
-                <button onClick ={handleFormSubmit}>Add Volunteer</button>
-              </form>
+              <label htmlFor="Saturday end"><h5>End</h5></label>
+              <input 
+                onChange={(event)=> setSatEnd(event.target.value)} 
+                type="time" 
+                id="time" 
+                name="volunteer" 
+                value={satEnd}
+                className="timeInfo"/>
+            </fieldset>
+              <button onClick ={handleFormSubmit} className="submitVol">Add Volunteer</button>
+            </form>
               </div>
             </div>
           </div>

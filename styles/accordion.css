@@ -73,4 +73,9 @@
   overflow: hidden;
   padding: 0;
   transition: max-height 0.3s ease-out;
+  border: 2px solid #161515;
+}
+
+.aboutContent {
+  margin: 20px 0;
 }
