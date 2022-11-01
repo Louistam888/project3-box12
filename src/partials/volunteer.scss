@@ -21,20 +21,20 @@
 }
 
 .callButton, .removeVol, .submitVol {
-    border: 1px solid $black;
-    color: $TFSwhite;
-    text-decoration: none; 
-    text-transform: uppercase;
-    margin: 5px;
-    padding: 10px;
-    font-family: $mainAccent;
-    transition: transform 0.6s ease-in-out;
-    font-size: 1.5rem;
-    width: 160px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  border: 1px solid $black;
+  color: $TFSwhite;
+  text-decoration: none; 
+  text-transform: uppercase;
+  margin: 5px;
+  padding: 10px;
+  font-family: $mainAccent;
+  transition: transform 0.6s ease-in-out;
+  font-size: 1.5rem;
+  width: 160px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .callButton, .submitVol {
@@ -65,7 +65,6 @@
     display: flex; 
     justify-content: flex-start;
     width: 50%;
-   
   }
 }
 
