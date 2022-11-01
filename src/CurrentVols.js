@@ -35,7 +35,6 @@ const CurrentVols = (props) => {
 
       <h4>Availability Today</h4>
       
-
       { `${todayAvailStart}` === "00:00" && `${todayAvailEnd}` === "23:59"
         ? <p className="timeDetails">All day</p>
         : <p className="timeDetails"> {todayAvailStart} to {todayAvailEnd}</p>

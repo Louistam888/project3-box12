@@ -9,9 +9,8 @@ form {
   margin: 10px 0;
 }
 
-.contactInfo, .timeInfo {
+.contactInfo, .timeInfo{
   width: 100%;
-  
   text-align: center;
   line-height: 2rem;
   font-size: 1.5rem;
@@ -20,8 +19,7 @@ form {
   border: 1px solid $black;
   font-family: $bodyText;
 }
-
-.contactInfo {
+.contactInfo{
   padding: 5px; 
 }
 

@@ -30,6 +30,15 @@ function App() {
   const [allVols, setAllVols] = useState([])
   const all = allVols;
 
+  all.sort(function (a, b) {
+    if (a.fullName < b.fullName) return -1;
+    if (a.fullName > b.fullName) return 1;
+    return 0;
+  })
+
+
+  console.log(all)
+
   //USE EFFECT FOR FETCHING ALL VOLUNTEERS 
   useEffect (()=> {
     const database = getDatabase(firebaseConfig);
