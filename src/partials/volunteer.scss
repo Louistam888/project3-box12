@@ -7,11 +7,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px 0;
 }
 
 .detail {
   font-size: 1.2rem; 
-  
 }
 
 .callButtonContainer {
@@ -49,5 +49,24 @@
   animation: push 0.5s ease-in-out;
 }
 
+.timeDisplayContainer {
+  width: 100%;
+  display: flex; 
+  justify-content: center;
 
+  .timeDisplayLeft {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 8px;
+    width: 50%;
+ 
+  }
+
+  .timeDisplayRight {
+    display: flex; 
+    justify-content: flex-start;
+    width: 50%;
+   
+  }
+}
 

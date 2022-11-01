@@ -48,35 +48,215 @@ const Volunteer = (props) => {
 
       <h4>Availability</h4>
 
-        { `${day.Sun.start}` === "" || `${day.Sun.end}` ===""
-          ? <p className = "timeDetails"> Sun: Not available </p>
-          :<p className="timeDetails">Sun: {day.Sun.start} to {day.Sun.end}</p>
+        { `${day.Sun.start}` === "" || `${day.Sun.end}` === ""
+          ? <div className="timeDisplayContainer">
+              <div className="timeDisplayLeft">
+                <p className="timeDetails">Sunday:</p>
+              </div>
+              <div className="timeDisplayRight">
+                <p className="timeDetails">Not available</p>
+              </div>
+            </div>
+          : `${day.Sun.start}` === "00:00" && `${day.Sun.end}` === "23:59"
+            ? <div className="timeDisplayContainer">
+                <div className="timeDisplayLeft">
+                  <p className="timeDetails">Sunday:</p>
+                </div>
+                <div className="timeDisplayRight">
+                  <p className="timeDetails">All day</p>
+                </div>
+              </div>
+            : `${day.Sun.start}` && `${day.Sun.end}` 
+              ? <div className="timeDisplayContainer">
+                  <div className="timeDisplayLeft">
+                    <p className="timeDetails">Sunday:</p>
+                  </div>
+                  <div className="timeDisplayRight">
+                    <p className="timeDetails">{day.Sun.start} to {day.Sun.end}</p>
+                  </div>
+                </div> 
+              : `${null}`
         }
+
         { `${day.Mon.start}` === "" || `${day.Mon.end}` === ""
-          ? <p className = "timeDetails"> Mon: Not available </p>
-          :<p className="timeDetails">Mon: {day.Mon.start} to {day.Mon.end}</p>
+          ? <div className="timeDisplayContainer">
+              <div className="timeDisplayLeft">
+                <p className="timeDetails">Monday:</p>
+              </div>
+              <div className="timeDisplayRight">
+                <p className="timeDetails">Not available</p>
+              </div>
+            </div>
+          : `${day.Mon.start}` === "00:00" && `${day.Mon.end}` === "23:59"
+            ? <div className="timeDisplayContainer">
+                <div className="timeDisplayLeft">
+                  <p className="timeDetails">Monday:</p>
+                </div>
+                <div className="timeDisplayRight">
+                  <p className="timeDetails">All day</p>
+                </div>
+              </div>
+            : `${day.Mon.start}` && `${day.Mon.end}` 
+              ? <div className="timeDisplayContainer">
+                  <div className="timeDisplayLeft">
+                    <p className="timeDetails">Monday:</p>
+                  </div>
+                  <div className="timeDisplayRight">
+                    <p className="timeDetails">{day.Mon.start} to {day.Mon.end}</p>
+                  </div>
+                </div> 
+              : `${null}`
         }
+      
         { `${day.Tue.start}` === "" || `${day.Tue.end}` === ""
-          ? <p className = "timeDetails"> Tue: Not available </p>
-          :<p className="timeDetails">Tue: {day.Tue.start} to {day.Tue.end}</p>
+          ? <div className="timeDisplayContainer">
+              <div className="timeDisplayLeft">
+                <p className="timeDetails">Tuesday:</p>
+              </div>
+              <div className="timeDisplayRight">
+                <p className="timeDetails">Not available</p>
+              </div>
+            </div>
+          : `${day.Tue.start}` === "00:00" && `${day.Tue.end}` === "23:59"
+            ? <div className="timeDisplayContainer">
+                <div className="timeDisplayLeft">
+                  <p className="timeDetails">Tuesday:</p>
+                </div>
+                <div className="timeDisplayRight">
+                  <p className="timeDetails">All day</p>
+                </div>
+              </div>
+            : `${day.Tue.start}` && `${day.Tue.end}` 
+              ? <div className="timeDisplayContainer">
+                  <div className="timeDisplayLeft">
+                    <p className="timeDetails">Tuesday:</p>
+                  </div>
+                  <div className="timeDisplayRight">
+                    <p className="timeDetails">{day.Tue.start} to {day.Tue.end}</p>
+                  </div>
+                </div> 
+              : `${null}`
         }
+      
         { `${day.Wed.start}` === "" || `${day.Wed.end}` === ""
-          ? <p className = "timeDetails"> Wed: Not available </p>
-          :<p className="timeDetails">Wed: {day.Wed.start} to {day.Wed.end}</p>
+          ? <div className="timeDisplayContainer">
+              <div className="timeDisplayLeft">
+                <p className="timeDetails">Wednesday:</p>
+              </div>
+              <div className="timeDisplayRight">
+                <p className="timeDetails">Not available</p>
+              </div>
+            </div>
+          : `${day.Wed.start}` === "00:00" && `${day.Wed.end}` === "23:59"
+            ? <div className="timeDisplayContainer">
+                <div className="timeDisplayLeft">
+                  <p className="timeDetails">Wednesday:</p>
+                </div>
+                <div className="timeDisplayRight">
+                  <p className="timeDetails">All day</p>
+                </div>
+              </div>
+            : `${day.Wed.start}` && `${day.Wed.end}` 
+              ? <div className="timeDisplayContainer">
+                  <div className="timeDisplayLeft">
+                    <p className="timeDetails">Wednesday:</p>
+                  </div>
+                  <div className="timeDisplayRight">
+                    <p className="timeDetails">{day.Wed.start} to {day.Wed.end}</p>
+                  </div>
+                </div> 
+              : `${null}`
         }
+      
         { `${day.Thu.start}` === "" || `${day.Thu.end}` === ""
-          ? <p className = "timeDetails"> Thu: Not available </p>
-          :<p className="timeDetails">Thu: {day.Thu.start} to {day.Thu.end}</p>
+          ? <div className="timeDisplayContainer">
+              <div className="timeDisplayLeft">
+                <p className="timeDetails">Thursday:</p>
+              </div>
+              <div className="timeDisplayRight">
+                <p className="timeDetails">Not available</p>
+              </div>
+            </div>
+          : `${day.Thu.start}` === "00:00" && `${day.Thu.end}` === "23:59"
+            ? <div className="timeDisplayContainer">
+                <div className="timeDisplayLeft">
+                  <p className="timeDetails">Thursday:</p>
+                </div>
+                <div className="timeDisplayRight">
+                  <p className="timeDetails">All day</p>
+                </div>
+              </div>
+            : `${day.Thu.start}` && `${day.Thu.end}` 
+              ? <div className="timeDisplayContainer">
+                  <div className="timeDisplayLeft">
+                    <p className="timeDetails">Thursday:</p>
+                  </div>
+                  <div className="timeDisplayRight">
+                    <p className="timeDetails">{day.Thu.start} to {day.Thu.end}</p>
+                  </div>
+                </div> 
+              : `${null}`
         }
+
         { `${day.Fri.start}` === "" || `${day.Fri.end}` === ""
-          ? <p className = "timeDetails"> Fri: Not available </p>
-          :<p className="timeDetails">Fri: {day.Fri.start} to {day.Fri.end}</p>
+          ? <div className="timeDisplayContainer">
+              <div className="timeDisplayLeft">
+                <p className="timeDetails">Friday:</p>
+              </div>
+              <div className="timeDisplayRight">
+                <p className="timeDetails">Not available</p>
+              </div>
+            </div>
+          : `${day.Fri.start}` === "00:00" && `${day.Fri.end}` === "23:59"
+            ? <div className="timeDisplayContainer">
+                <div className="timeDisplayLeft">
+                  <p className="timeDetails">Friday:</p>
+                </div>
+                <div className="timeDisplayRight">
+                  <p className="timeDetails">All day</p>
+                </div>
+              </div>
+            : `${day.Fri.start}` && `${day.Fri.end}` 
+              ? <div className="timeDisplayContainer">
+                  <div className="timeDisplayLeft">
+                    <p className="timeDetails">Friday:</p>
+                  </div>
+                  <div className="timeDisplayRight">
+                    <p className="timeDetails">{day.Fri.start} to {day.Fri.end}</p>
+                  </div>
+                </div> 
+              : `${null}`
         }
+
         { `${day.Sat.start}` === "" || `${day.Sat.end}` === ""
-          ? <p className = "timeDetails"> Sat: Not available </p>
-          :<p className="timeDetails">Sat: {day.Sat.start} to {day.Sat.end}</p>
+          ? <div className="timeDisplayContainer">
+              <div className="timeDisplayLeft">
+                <p className="timeDetails">Saturday:</p>
+              </div>
+              <div className="timeDisplayRight">
+                <p className="timeDetails">Not available</p>
+              </div>
+            </div>
+          : `${day.Sat.start}` === "00:00" && `${day.Sat.end}` === "23:59"
+            ? <div className="timeDisplayContainer">
+                <div className="timeDisplayLeft">
+                  <p className="timeDetails">Saturday:</p>
+                </div>
+                <div className="timeDisplayRight">
+                  <p className="timeDetails">All day</p>
+                </div>
+              </div>
+            : `${day.Sat.start}` && `${day.Sat.end}` 
+              ? <div className="timeDisplayContainer">
+                  <div className="timeDisplayLeft">
+                    <p className="timeDetails">Saturday:</p>
+                  </div>
+                  <div className="timeDisplayRight">
+                    <p className="timeDetails">{day.Sat.start} to {day.Sat.end}</p>
+                  </div>
+                </div> 
+              : `${null}`
         }
-   
     </li>
   )
 }
