@@ -1,5 +1,8 @@
+//THIS COMPONENT IMPORTS CURRENTLY AVAILABLE VOLUNTEERS FROM AVAILABLE.JS AND RENDERS INFORMATION FOR EACH VOLUNTEER
+
 const CurrentVols = (props) => {
 
+  //IMPORTED VOLUNTEER DETAILS 
   const person = props.details; 
   const today = props.today;
   const todayAvailStart = props.details.avail[today].start;
@@ -11,14 +14,12 @@ const CurrentVols = (props) => {
 
   return (
 
-    
     <li className="vol">
       <h3>{person.fullName}</h3>
       { `${person.notes}` === ""
       ? <p className="details">Notes: N/A</p>
       : <p className="details">Notes: {person.notes}</p>  
       }      
-
 
     <div className="callButtonContainer">
       {

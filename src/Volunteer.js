@@ -1,8 +1,11 @@
+//THIS COMPONENT IMPORTS INFORMATION OF ALL VOLUNTEERS, REGARDLESS OF AVAILABILITY, FROM ALLVOLUNTEERS.JS AND RENDERS INFORMATION FOR EACH VOLUNTEER
+
 import firebaseConfig from "./firebase";
 import {getDatabase, ref, remove} from "firebase/database"; 
 
 const Volunteer = (props) => {
 
+  //IMPORTED INFORMATION OF ALL VOLUNTEERS
   const person = props.details; 
   const day = props.details.avail;
 
@@ -11,6 +14,7 @@ const Volunteer = (props) => {
   const phone1Alt = `call ${props.details.phone1}`;
   const phone2Alt = `call ${props.details.phone2}`;
 
+  //FUNCTION FOR DELETING VOLUNTEERS FROM DATABASE
   const handleRemoveVol = (deleteThis) => {
     const database= getDatabase(firebaseConfig);
     const databaseRef = ref(database, `/${deleteThis}`);

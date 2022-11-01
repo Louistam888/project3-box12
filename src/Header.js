@@ -1,3 +1,5 @@
+//THIS COMPONENT IS THE HEADER ELEMENT, AND CONTAINS A CLOCK UPDATING DATE AND TIME EVERY ONE SECOND
+
 import {useState, useEffect} from "react";
 
 const Header = (props) => {
@@ -26,9 +28,9 @@ const Header = (props) => {
           <div className="mainNumbersContainer">
             <a href="tel:123-456-7890" className="mainNumbers" alt="Call 123-456-7890">Captain's line</a>
             <a href="tel:416-967-1111" className="mainNumbers" alt="Call 416-967-1111">TFS Communications</a>
-          </div>
-        </div>
-      </div>
+          </div>{/* mainNumbersContainer div end */}
+        </div>{/* mainTextContainer div end */}
+      </div>{/* wrapper div end */}
     </header>
   </>
   )

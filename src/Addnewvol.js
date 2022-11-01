@@ -1,10 +1,15 @@
+//THIS COMPONENT CONTAINS THE FORM FOR ADDING NEW VOLUNTEERS TO THE DATABASE
+
 import {useState} from "react";
 import firebaseConfig from "./firebase";
 import {getDatabase, ref, push} from "firebase/database";
 
 const Addnewvol = (props) => {
 
+  //IMPORTED FUNCTION FOR OPENING AND CLOSING ACCORDION MENUS
   const handleAccordion = props.handleAccordion;
+
+  //SET USE STATE FOR FORM INPUTS 
   
   const [fullName, setFullName] = useState ("");
   const [phone1, setPhone1] = useState ("");
@@ -31,14 +36,15 @@ const Addnewvol = (props) => {
   
   const [satStart, setSatStart] = useState ("");
   const [satEnd, setSatEnd] = useState ("");
+
+
+  //FUNCTION FOR ADDING NEW VOLUNTEERS TO DATABASE ONCE SUBMIT BUTTON IS PRESSED 
   
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const database = getDatabase(firebaseConfig);
-   
     const databaseRef = ref(database);
    
-
     push(databaseRef, {
   
       fullName: `${fullName}`,
@@ -73,7 +79,6 @@ const Addnewvol = (props) => {
     setFriEnd("");
     setSatStart("");
     setSatEnd("");
-  
   }
 
   return (
@@ -83,20 +88,19 @@ const Addnewvol = (props) => {
           <div className="accordionItemHeader3" onClick={()=>handleAccordion(".accordionItemHeader3")}>
             <div className="wrapper">
               <h2>Add new volunteer</h2>
-            </div>
-          </div>
+            </div>{/* wrapper div end */}
+          </div>{/* accordionItemHeader3 div end */}
           <div className="accordionItemBody">
             <div className="wrapper">
               <div className="accordionContent">
                 <div className="addNewVolText">
                   <p className="aboutDetails">Fill in the fields below to enter a new volunteer into the database. Enter at least one phone number and the times the new volunteer will be available in 24-hour format for each applicable day. For all day availability, enter "00:00" for the start time and "23:59" as the end time. Leave the time fields blank for days where the volunteer is not available.</p>
-
-                  <p className="aboutDetails">Once the form is completed, click the "add volunteer" button to add the new volunteer to the database. They will now appear in the "all volunteers" section of the app. </p>
-
+                  <p className="aboutDetails">Once the form is completed, click the "add volunteer" button to add the new volunteer to the database. They will now appear in the "all volunteers" section of the app. If the newly added volunteer does not appear, simply close the accordion and re-open it, and they should appear.</p>
                   <p className="aboutDetails">To remove a volunteer, click on the "all volunteers" section to see a list of all volunteers. Find the field for the volunteer to be deleted and press the "remove volunteer" button.
                   </p>
-                </div>
-            
+                </div>{/* addNewVolText div end */}
+
+{/* INPUT FORM  */}
                 <form action="submit">
                   <h3 className="h3Form">profile info</h3>
                     <label htmlFor="full name"><h4>Full Name</h4></label>
@@ -291,12 +295,12 @@ const Addnewvol = (props) => {
                     </fieldset>
                     <button onClick ={handleFormSubmit} className="submitVol">Add Volunteer</button>
                 </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> 
+              </div>{/* accordionContent div end */}
+            </div>{/* wrapper div end */}
+          </div>{/* accordionItemBody div end */}
+        </div> {/* accordionItem div end  */}
+      </div> {/* accordion div end */}
+    </section>
   )
 }
 

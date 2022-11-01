@@ -18,10 +18,11 @@ import "./partials/volunteer.scss";
 import "./partials/accordion.scss";
 import "./partials/addNewVol.scss";
 
-
+//FIREBASE IMPORT 
 import firebaseConfig from "./firebase";
 import {getDatabase, ref, onValue} from "firebase/database"; 
 import {useState, useEffect} from "react";
+
 
 function App() {
     
@@ -48,7 +49,7 @@ function App() {
     });
   }, []);
 
-
+  //FUNCTION FOR OPENING AND CLOSING ACCORDION MENUS 
   const accordion = (param) => {
 
     accordion.accordionItemHeader = document.querySelectorAll(param);
@@ -76,8 +77,8 @@ function App() {
                        handleAccordion ={accordion} />
         <Addnewvol handleAccordion={accordion}/>
         <About handleAccordion={accordion} />
-      </div>
-    </div>
+      </div> {/* div end */}
+    </div> // app div end
   );
 }
 
