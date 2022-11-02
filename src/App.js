@@ -36,9 +36,6 @@ function App() {
     return 0;
   })
 
-
-  console.log(all)
-
   //USE EFFECT FOR FETCHING ALL VOLUNTEERS 
   useEffect (()=> {
     const database = getDatabase(firebaseConfig);
