@@ -6,6 +6,7 @@ import Available from './Available';
 import Allvolunteers from "./Allvolunteers";
 import Addnewvol from "./Addnewvol";
 import About from "./About";
+import Footer from "./Footer";
 
 //SASS
 import "./partials/setup.scss";
@@ -17,6 +18,7 @@ import "./partials/mediaQueries.scss";
 import "./partials/volunteer.scss";
 import "./partials/accordion.scss";
 import "./partials/addNewVol.scss";
+import "./partials/footer.scss";
 
 //FIREBASE IMPORT 
 import firebaseConfig from "./firebase";
@@ -83,6 +85,7 @@ function App() {
                        handleAccordion ={accordion} />
         <Addnewvol handleAccordion={accordion}/>
         <About handleAccordion={accordion} />
+        <Footer />
       </div> {/* div end */}
     </div> // app div end
   );

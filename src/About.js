@@ -27,7 +27,7 @@ const About = (props)=> {
                 <div className="aboutContent">
                 <h3>What is the Box 12 Association?</h3>
 
-                  <p className="aboutDetails"> Founded in 1948, the Box 12 Association has been providing continous support to Toronto firefighters for over 70 years. This all-volunteer organization brings much-needed refreshments and food to fire crews at large emergency scenes. The organization's name comes from alarm box 12, which was pulled in 1904 to summon emergency crews at the outbreak of the Great Toronto Fire - the largest in Toronto's history. 
+                  <p className="aboutDetails"> Founded in 1948, the Box 12 Association has been providing continuous support to Toronto firefighters for over 70 years. This all-volunteer organization brings much-needed refreshments and food to fire crews at large emergency scenes. The organization's name comes from alarm box 12, which was pulled in 1904 to summon emergency crews at the outbreak of the Great Toronto Fire - the largest in Toronto's history. 
                   </p>
                 </div> 
               </div>
@@ -39,4 +39,4 @@ const About = (props)=> {
   )
 }
 
-export default About 
+export default About; 

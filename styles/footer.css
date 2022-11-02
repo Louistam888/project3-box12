@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+footer {
+  font-family: "Poppins-Semibold";
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: #fcb217;
+}
