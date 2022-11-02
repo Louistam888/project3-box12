@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+h1 {
+  font-size: 3.5rem;
+  width: 100%;
+  font-family: "Poppins-Semibold";
+  text-transform: uppercase;
+  color: #ec1d24;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+h2, .h2Red {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Poppins-Semibold";
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 1.8rem;
+}
+
+.h2Red {
+  background-color: #ec1d24;
+  border: none;
+}
+
+h3, .h3Form {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-family: "Poppins-Semibold";
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.h3Form {
+  font-size: 2.2rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-family: "Poppins-Semibold";
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  margin-bottom: 3px;
+}
+
+.time {
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "OpenSans-Bold";
+  margin: 20px 0;
+}
+
+.details, .timeDetails {
+  font-size: 1.5rem;
+  font-family: "OpenSans-Regular";
+  white-space: pre-line;
+}
+
+.timeDetails {
+  text-align: center;
+}
+
+.aboutDetails {
+  display: flex;
+  font-size: 1.5rem;
+  text-align: center;
+  white-space: pre-wrap;
+  justify-content: center;
+  margin-bottom: 8px;
+  font-family: "OpenSans-Regular";
+}
+
+.addNewVolText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.none {
+  font-size: 3rem;
+  margin: 20px;
+}

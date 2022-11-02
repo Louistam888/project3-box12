@@ -1,0 +1,8 @@
+@media (min-width: 1000px) {
+  header {
+    height: 50vh;
+  }
+  .mainTextContainer {
+    height: 50vh;
+  }
+}

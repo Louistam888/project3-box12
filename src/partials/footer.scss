@@ -1,0 +1,11 @@
+@import "./variables.scss";
+
+footer {
+  font-family: $mainAccent;
+  font-size: 1.6rem; 
+  display: flex; 
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: $TFSyellow;
+}

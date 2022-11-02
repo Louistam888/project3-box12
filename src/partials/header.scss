@@ -1,14 +1,55 @@
-.app {
+@import "./variables.scss";
 
-  .mainTextContainer {
-    display: flex; 
-    flex-direction: column;
-    border: 2px solid red;
-    align-items: center;
-    text-align: center;
-    justify-content: center; 
+header {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.5) 100%), url(../assets/Box12.jpg);
+  background-size: cover;
+  background-position: center 60%;
+}
+
+.mainTextContainer {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center; 
+}
+
+.mainNumbersContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .mainNumbers {
+    background-color: $TFSred;
+    border: 1px solid $TFSyellow;
+    color: $TFSwhite;
+    text-decoration: none; 
+    text-transform: uppercase;
+    margin: 5px;
+    padding: 10px;
+    font-family: $mainAccent;
+    transition: transform 0.6s ease-in-out;
+    font-size: 1.5rem;
+    width: 200px;
   }
 
-
+  .mainNumbers:active {
+    animation: push 0.5s ease-in-out;
+  }
 }
+
+@keyframes push {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.8);}
+  100% {transform: scale(1);}
+}
+
+
+
+
+
+
 
